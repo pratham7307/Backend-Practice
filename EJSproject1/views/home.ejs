@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web page</title>
+</head>
+<body>
+    <h1>Name: <%= stu.name %></h1>
+    <p>Age: <%= stu.age %></p>
+     <p>Marks: <%= stu.marks %></p>
+    <p>Email: <%= stu.email %></p>
+
+    <h3>Hobbies:</h3>
+    <ul>
+  <% stu.hobbies.forEach(function(hobby) { %>
+    <li><%= hobby %></li>
+  <% }); %>
+    </ul>
+</body>
+</html>

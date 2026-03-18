@@ -20,6 +20,7 @@
 // app.listen(3001, () => {
 //   console.log("http://localhost:3001");
 // });
+
 const express = require("express");
 const path = require("path");
 
@@ -31,7 +32,7 @@ app.get("/data", (req, res) => {
   const username = req.query.username;
   const email = req.query.email;
 
-  res.send(`
+  res.send(` 
     <h1>Data Page</h1>
     <p>Username: ${username}</p>
     <p>Email: ${email}</p>
