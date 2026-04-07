@@ -1,6 +1,14 @@
 const express=require('express');
 const app=express();
 app.set('view engine','ejs');
+app.use((req,res,next)=>{
+  console.log("middleware 1...");
+  next();
+})
+app.use((req,res,next)=>{
+  console.log("middleware 1...");
+  next();
+})
 app.get('',(req,res)=>{
   let student={
   name:'abcd',

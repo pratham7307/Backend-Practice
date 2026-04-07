@@ -6,16 +6,31 @@
     <title>Web page</title>
 </head>
 <body>
+    <% include('/common/header')%>
     <h1>Name: <%= stu.name %></h1>
     <p>Age: <%= stu.age %></p>
      <p>Marks: <%= stu.marks %></p>
     <p>Email: <%= stu.email %></p>
 
-    <h3>Hobbies:</h3>
+    <!-- <h3>Hobbies:</h3>
     <ul>
   <% stu.hobbies.forEach(function(hobby) { %>
     <li><%= hobby %></li>
   <% }); %>
-    </ul>
+    </ul> -->
+    <!-- <h3>Hobbies:</h3>
+<ul>
+  <% for(let i = 0; i < stu.hobbies.length; i++) { %>
+    <li><%= stu.hobbies[i] %></li>
+  <% } %> -->
+  <h3>Hobbies:</h3>
+<ul>
+  <% let i = 0; %>
+  <% while(i < stu.hobbies.length) { %>
+    <li><%= stu.hobbies[i] %></li>
+    <% i++; %>
+  <% } %>
+</ul>
+</ul>
 </body>
 </html>
